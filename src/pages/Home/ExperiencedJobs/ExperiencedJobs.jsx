@@ -7,7 +7,7 @@ const ExperiencedJobs = () => {
     const [jobs, setJobs] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/experiencedJobs')
+        fetch('https://job-portal-server-omega.vercel.app/experiencedJobs')
             .then(res => res.json())
             .then(data => {
                 const topExperiencedJobs = data.slice(0, 6)
@@ -16,7 +16,7 @@ const ExperiencedJobs = () => {
     }, [])
 
     const handleSeeAllJobs = () => {
-        fetch('http://localhost:5000/allJobs')
+        fetch('https://job-portal-server-omega.vercel.app/allJobs')
             .then(res => res.json())
             .then(data => setJobs(data))
     }

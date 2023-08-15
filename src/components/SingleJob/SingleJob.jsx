@@ -26,7 +26,7 @@ const SingleJob = ({ singleJob }) => {
         }
 
         if (user) {
-            fetch('http://localhost:5000/applyJob', {
+            fetch('https://job-portal-server-omega.vercel.app/applyJob', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

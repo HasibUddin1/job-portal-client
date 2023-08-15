@@ -10,7 +10,7 @@ const SingleCompanyDetails = () => {
     const [company, setCompany] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleCompany/${id}`)
+        fetch(`https://job-portal-server-omega.vercel.app/singleCompany/${id}`)
             .then(res => res.json())
             .then(data => setCompany(data))
     }, [])

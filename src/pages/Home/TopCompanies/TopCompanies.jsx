@@ -7,7 +7,7 @@ const TopCompanies = () => {
     const [companies, setCompanies] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/topCompanies')
+        fetch('https://job-portal-server-omega.vercel.app/topCompanies')
             .then(res => res.json())
             .then(data => setCompanies(data))
     }, [])
