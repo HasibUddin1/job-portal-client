@@ -8,6 +8,8 @@ import ContactUs from "../pages/ContactUs/ContactUs";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 
+import SingleCompanyDetails from "../components/SingleCompanyDetails/SingleCompanyDetails";
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -32,6 +34,10 @@ const router = createBrowserRouter([
             {
                 path: 'signUp',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: 'singleCompanyDetails/:id',
+                element: <SingleCompanyDetails></SingleCompanyDetails>
             }
         ]
     }
