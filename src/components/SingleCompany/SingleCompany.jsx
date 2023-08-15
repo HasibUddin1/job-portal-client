@@ -7,7 +7,7 @@ const SingleCompany = ({ singleCompany }) => {
     const { _id, name, location, employees, specialties, photo } = singleCompany
 
     return (
-        <div className="flex flex-col items-center rounded-lg shadow-2xl md:flex-row md:max-w-xl bg-slate-100 w-1/3">
+        <div className="flex flex-col items-center rounded-lg shadow-2xl md:flex-row md:max-w-xl bg-slate-100 lg:w-1/3 p-5 lg:p-0">
             <img className="w-1/3 h-full rounded-s-lg" src={photo} alt="" />
             <div className="flex flex-col justify-between p-4 leading-normal">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{name}</h5>

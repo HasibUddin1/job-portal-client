@@ -6,11 +6,11 @@ const Blog = () => {
             <div className="mb-10">
                 <h1 className="text-4xl text-center font-bold">Blog <span className="text-blue-600">Q&A</span></h1>
             </div>
-            <div className='flex flex-row-reverse gap-5 items-center'>
-                <div className='w-1/2'>
+            <div className='lg:flex flex-row-reverse gap-5 items-center'>
+                <div className='lg:w-1/2'>
                     <img className='rounded-xl' src={QandAImage} alt="" />
                 </div>
-                <div className='w-1/2'>
+                <div className='lg:w-1/2'>
                     <div className="collapse collapse-arrow bg-base-200">
                         <input type="radio" name="my-accordion-2" defaultChecked="checked" />
                         <div className="collapse-title text-xl font-medium">

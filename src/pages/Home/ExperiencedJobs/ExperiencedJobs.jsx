@@ -25,7 +25,7 @@ const ExperiencedJobs = () => {
     return (
         <div className="mb-10">
             <h1 className="text-center text-4xl mt-20 font-bold mb-10">Discover Experienced <span className="text-blue-500">Jobs</span></h1>
-            <div data-aos="fade-up" className="w-9/12 mx-auto grid grid-cols-3 gap-10 mb-20">
+            <div data-aos="fade-up" className="w-9/12 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 mb-20">
                 {
                     jobs.map(singleJob => <SingleJob
                         key={singleJob._id}

@@ -10,9 +10,9 @@ const Banner = () => {
     const [activeButton, setActiveButton] = useState('job seeker')
 
     return (
-        <div className='h-[800px] bg-cover -mt-24' style={{ backgroundImage: `url(${bannerImage})` }}>
-            <div className='flex items-end w-9/12 mx-auto justify-between h-full'>
-                <div className='w-1/2 pe-40 flex flex-col justify-center h-[700px]'>
+        <div className='lg:h-[800px] bg-cover lg:-mt-24' style={{ backgroundImage: `url(${bannerImage})` }}>
+            <div className='lg:flex lg:items-end lg:w-9/12 mx-auto justify-between lg:h-full'>
+                <div className='lg:w-1/2 lg:pe-40 lg:flex flex-col justify-center lg:h-[700px] pt-10 lg:pt-0'>
                     <div className='flex gap-5 mb-5'>
                         <button onClick={() => setActiveButton('job poster')} className={
                             activeButton === 'job poster' ?
@@ -47,15 +47,15 @@ const Banner = () => {
                         </div>
                     </CSSTransition>
                 </div>
-                <div className='w-1/2 h-[700px] flex flex-col justify-end'>
+                <div className='lg:w-1/2 lg:h-[700px] lg:flex flex-col justify-end'>
                     <CSSTransition
                         in={activeButton === 'job seeker'}
                         timeout={300}
                         classNames="fade-up"
                         unmountOnExit
                     >
-                        <div className='h-full'>
-                            <img className='h-full' src={jobSeekerImage} alt="" />
+                        <div className='lg:h-full'>
+                            <img className='lg:h-full' src={jobSeekerImage} alt="" />
                         </div>
                     </CSSTransition>
 
@@ -65,8 +65,8 @@ const Banner = () => {
                         classNames="fade-up"
                         unmountOnExit
                     >
-                        <div className='h-full'>
-                            <img className='h-full' src={jobPosterImage} alt="" />
+                        <div className='lg:h-full'>
+                            <img className='lg:h-full' src={jobPosterImage} alt="" />
                         </div>
                     </CSSTransition>
                 </div>

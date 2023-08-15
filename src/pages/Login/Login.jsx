@@ -35,11 +35,11 @@ const Login = () => {
     return (
         <div className='min-h-screen'>
             <div className='flex items-center'>
-                <div className='flex justify-center items-center w-1/2 mx-auto rounded-xl bg-slate-200 h-[500px]'>
-                    <div className='w-1/2 h-[500px]'>
-                        <img className='rounded-s-xl h-full w-full' src={loginImage} alt="" />
+                <div className='lg:flex justify-center items-center w-10/12 lg:w-1/2 mx-auto rounded-xl bg-slate-200 lg:h-[500px]'>
+                    <div className='lg:w-1/2 lg:h-[500px]'>
+                        <img className='lg:rounded-s-xl rounded-t-xl h-full w-full' src={loginImage} alt="" />
                     </div>
-                    <div className='p-10 w-1/2'>
+                    <div className='p-10 lg:w-1/2'>
                         <h2 className='text-3xl font-semibold'>Login</h2>
                         <form onSubmit={handleLogin}>
                             <div className="relative z-0 w-full mb-6 group mt-5">
