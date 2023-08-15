@@ -14,7 +14,7 @@ const Contact = () => {
                 </div>
                 <div className='md:w-1/2'>
                     <h2 className='text-rose-600 font-bold text-2xl mb-2'>Message Us</h2>
-                    <p className='text-xl mb-5'>If you have any offer, queries, suggestions, opinion, objection - feel free to let me know through email, phone or any other social media platform that I have shared in my portfolio.</p>
+                    <p className='text-xl mb-5'>If you have any offer, queries, suggestions, opinion, objection - feel free to let us know through email, phone or any other social media platform that we have shared in our website.</p>
                     <div className='flex items-center gap-5 mb-5'>
                         <div>
                             <FaUser className='text-4xl text-rose-600'></FaUser>
