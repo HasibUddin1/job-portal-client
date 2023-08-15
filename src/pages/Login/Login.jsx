@@ -1,11 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom';
 import loginImage from '../../assets/images/login-image.jpg'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProviders';
 import Swal from 'sweetalert2';
 
 const Login = () => {
 
+    const [error, setError] = useState('')
     const { signIn } = useContext(AuthContext)
     const navigate = useNavigate()
 
@@ -16,6 +17,7 @@ const Login = () => {
         const email = form.email.value
         const password = form.password.value
 
+        setError('')
         signIn(email, password)
             .then(() => {
                 Swal.fire({
@@ -27,7 +29,10 @@ const Login = () => {
                 navigate('/')
             })
             .catch(error => {
-                console.log(error)
+                console.log(error.message)
+                if(error.message === 'Firebase: Error (auth/user-not-found).'){
+                    setError('Your credentials do not match')
+                }
             })
     }
 
@@ -61,6 +66,7 @@ const Login = () => {
                                 <Link to='/signUp'><button className='border-[#2563EB] text-[#2563EB] border-2 py-3 rounded hover:bg-blue-800 ease-in-out duration-200 cursor-pointer w-full hover:text-white'>Sign Up</button></Link>
                             </div>
                         </form>
+                        {error && <p className='text-red-600 font-bold'>{error}</p>}
                     </div>
                 </div>
             </div>
